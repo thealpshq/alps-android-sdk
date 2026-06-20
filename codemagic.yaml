@@ -1,0 +1,19 @@
+workflows:
+  android-sdk-build:
+    name: Alps Android SDK Build
+    instance_type: linux_x2
+    max_build_duration: 60
+    environment:
+      android_ndk: r25b
+      java: java11
+    scripts:
+      - name: Build Android SDK
+        script: |
+          chmod +x gradlew
+          ./gradlew build -x test
+      - name: Build Example APK
+        script: |
+          ./gradlew :example:assembleDebug
+    artifacts:
+      - build/outputs/**
+      - example/build/outputs/apk/debug/*.apk
