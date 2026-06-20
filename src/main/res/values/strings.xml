@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AlpsSDK</string>
+    <string name="support">Support</string>
+    <string name="home">Home</string>
+    <string name="messages">Messages</string>
+    <string name="answers">Answers</string>
+</resources>
